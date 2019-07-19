@@ -1,0 +1,147 @@
+\documentclass[11pt, letterpaper]{article} %Sets the default text size to 11pt and class to article
+\usepackage{times}
+\usepackage{nopageno}
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{hyperref}
+
+\titleformat{\section}
+{\Large\bfseries\uppercase}  %this argument for the formatting
+{}  %this argument is for numbering
+{0em}  %distance between the number and text
+{}[\titlerule]  %after the gap between the number and title
+
+\titlespacing{\section}
+{0em}    %left margin
+{0em}    %space between
+{0em}    %space afterward
+
+\titleformat{\subsection}[runin]
+{\bfseries\large}
+{}
+{0em}
+{}
+
+\titlespacing{\subsection}
+{0em}    %left margin
+{0em}    %space between
+{0.5em}  %space afterward
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\maketitle}{
+\begin{center}
+{\Huge\bfseries
+\theauthor}
+
+266 Union Ave, Apt. 2, New Rochelle, NY 10801
+
+\href{mailto:xinkaili@buffalo.edu}{xinkaili@buffalo.edu} $\bullet$ 646-309-3660
+
+\end{center}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Begin %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}\title{Resume} 
+\author{Xinkai Lin}
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Education %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education}
+\subsection{University at Buffalo, The state University of New York}
+\hspace*{\fill}May 2019
+
+\noindent Bachelor of Science in Computer Science 
+\hspace*{\fill}GPA: 3.49/4.0\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SKILLS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{SkillS}
+\subsection{Programming Skills}
+: Java, Python, MySQL, HTML, CSS, JavaScript, Vue, Electron
+
+\subsection{Programs}
+: Microsoft Office, Eclipse, Version Control(Git), Unity
+
+\subsection{Language}
+: Fluent in Mandarin Chinese\\
+
+%%%%%%%%%%%%%%%%%%%%%%%% Professional Experience %%%%%%%%%%%%%%%%%%%%%
+
+\section{Professional Experience}
+\subsection{Web Applications for Movies}
+-- MySQL, EC2, Apache Tomcat, Bootstrap, jQuery, JBDC
+\hspace*{\fill}Nov 2018 -- Jan 2019
+\vspace{-0.8em}
+\begin{itemize}
+	\setlength\itemsep{-0.5em}
+	\item Launched a free Amazon Web Services EC2 instance and setup MySQL and Apache Tomcat
+	\item Created a MySQL Database with several tables for the movie list and its information, and insert preparatory movie data into the table
+	\item Built the movie website which contains a login and main page with capacity of searching and browsing used HTML, CSS, JavaScript and imports Bootstrap and jQuery
+	\item Created Java Servlet which handles the login request and movie information request from frontend and returns the result in the JSON format
+\end{itemize}
+\vspace{-0.8em}
+
+\subsection{Parking Assistant}
+-- Realtime Embed System, Arduino Adafruit METRO M0 Express
+\hspace*{\fill}Sep 2018 -- Dec 2018
+\vspace{-0.8em}
+\begin{itemize}
+	\setlength\itemsep{-0.5em}
+	\item Implement four ultrasonic sensors to calculated the distances between two cars and used it as references to find out a best routine for parallel parking
+	\item Equipped one red LED and one buzzer as part of the alarm system and activated if the distance of the object car is too close
+	\item Implemented a Liquid Crystal Display for giving instructions on how to parked the car in parallel parking
+\end{itemize}
+\vspace{-0.8em}
+
+\subsection{Geek Fantasy(2D Unity Game)}
+-- Unity, C\#, AI
+\hspace*{\fill}Jan 2018 -- Mar 2018
+\vspace{-0.8em}
+\begin{itemize}
+	\setlength\itemsep{-0.5em}
+	\item Created a Two-dimensional Role Play Game by Unity included one player and approximately thirty enemy's game objects in eight different play scenes
+	\item Implemented player’s movement and attack script written by C\#, so that player is able to control the character to move in four directions and attack enemy in their desire
+	\item Implemented enemy’s AI script included enemy’s automatic tracing and attack ability, enemy would automatically trace and attacked player when their distance is within certain range
+	\item Applied collision to all game objects, so that they are able to detected the intersection of two or more objects
+\end{itemize}
+\vspace{-0.8em}
+
+\subsection{Interpreter}
+-- SML, Python
+\hspace*{\fill}Jan 2018 -- Mar 2018
+\vspace{-0.8em}
+\begin{itemize}
+	\setlength\itemsep{-0.5em}
+	\item Built an interpreter which is able to read and perform instructions from input file and return the result into the output file in both Python and SML
+	\item Implemented basic computations as well as adding support for immutable variables and structures for expressing scope, finally perform function call
+\end{itemize}
+\vspace{-0.8em}
+
+\subsection{Escape-time Fractals}
+-- Eclipse, Java
+\hspace*{\fill}Jan 2017 -- Mar 2017
+\vspace{-0.8em}
+\begin{itemize}
+	\setlength\itemsep{-0.5em}
+	\item Created four Escape-time Fractals by designed a GUI and implemented an algorithm to calculated the formulas used Java in Eclipse
+	\item Implement functions included zoom-in, resized fractal panels, drop down menu with multiple different options
+	\item Collaborated with other three undergraduates' students in minimum of two meeting per week throughout the semester
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Research Experience %%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Research Experience}
+\subsection{Buffalo Botanical Garden}
+(Research Assistant) -- Visual Studio, HTML 
+\hspace*{\fill}Jan 2018 -- Mar 2018
+\vspace{-0.8em}
+\begin{itemize}
+	\setlength\itemsep{-0.5em}
+	\item Categorized two list of elements into four separate groups of fields
+	\item Redesigned the structure by centered all the information, displayed in full screen mode and changed background color to beautify the edit page
+\end{itemize}
+\end{document}

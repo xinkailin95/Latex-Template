@@ -1,0 +1,313 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{titlesec}  % use to modified section and subsection like "titleformat"
+\usepackage{titling}
+\usepackage{nopageno}
+\usepackage{ctex}  % 用中文的包
+\usepackage{enumerate}
+\usepackage{cancel}
+\usepackage{color}  % change text color, \textcolor{color}{text}
+\usepackage{colortbl}  % change table color, \columncolor{color}text, \rowcolor{color}text, \cellcolor{color}text  
+
+\titleformat{\section}
+{\Large\bfseries}
+{}
+{0em}
+{}[\titlerule]
+
+\titlespacing{\section}
+{0em}	% left margin
+{0em}	% space between
+{1em}	% space afterward
+
+\renewcommand{\maketitle}{
+\begin{center}
+{\Huge\bfseries
+\thetitle}
+\end{center}}
+
+% creating a new command for main idea
+\newcommand{\idea}[1]{
+\noindent
+\begin{minipage}[t]{0.15\textwidth}
+	\textsc{main idea}
+\end{minipage}
+\hspace{-0.8cm}\vline\hspace{0.05cm}
+\begin{minipage}[t]{0.88\textwidth}
+	\textit{#1}
+\end{minipage}\vspace{0.25cm}}
+
+% creating a new command for example
+\newcommand{\example}[1]{
+\noindent
+\begin{minipage}[t]{0.02\textwidth}
+	\textsc{example}
+\end{minipage}
+\hspace{1.6cm}:\hspace{0.05cm}
+\begin{minipage}[t]{0.88\textwidth}
+	\textnormal{#1}
+\end{minipage}\vspace{0.25cm}}
+
+\begin{document}
+
+\title{Algorithm}
+\author{Xinkai Lin}
+\date{\today}
+
+\maketitle
+
+\section{Sieve of Eratosthenes}
+\idea{Cross out all the multiple number from 2 $\rightarrow$ n}
+\example{Find all prime number in the following list \\ 
+		 2, 3, 4, 5, 6, 7, 8, 9, 10}
+
+\begin{minipage}{0.9\textwidth}
+	\begin{enumerate}[Step 1:]
+		\item 2, 3, \xcancel{4}, 5, \xcancel{6}, 7, \xcancel{8}, 9, \xcancel{10}
+		\item 2, 3, \xcancel{4}, 5, \xcancel{6}, 7, \xcancel{8}, \xcancel{9}, \xcancel{10}
+		
+		\hspace{-1.5cm}Prime\hspace{0.09cm}: 2, 3, 5, 7
+	\end{enumerate}
+\end{minipage}\\\\
+
+\section{Merge Sort}
+\idea{Find the mid point and then split array into half\\
+	  Merge sort the left array\\
+	  Merge sort the right array\\
+	  Merge left and right array\\
+	  Better apply to LinkedList}
+\example{Sort the following list}
+
+\begin{minipage}{0.8\textwidth}
+	\begin{enumerate}
+		\item 
+		$\begin{array}{|l|c|c|c|c|r|}
+			\hline
+			4 & 3 & 7 & 2 & 1 & 6 \\
+			\hline
+		\end{array}$
+		
+		\hspace{0.5cm}$\swarrow$
+		\hspace{1.5cm}$\searrow$
+		\item 
+		$\begin{array}{|l|c|r|}
+			\hline
+			4 & 3 & 7 \\
+			\hline
+		\end{array}$
+		$\begin{array}{|l|c|r|}
+			\hline
+			2 & 1 & 6 \\
+			\hline
+		\end{array}$
+		
+		\hspace{0.2cm}$\swarrow$
+		\hspace{0.3cm}$\searrow$
+		\hspace{0.6cm}$\swarrow$
+		\hspace{0.1cm}$\searrow$
+		\item
+		$\begin{array}{|l|r|}
+			\hline
+			4 & 3 \\
+			\hline
+		\end{array}$
+		$\begin{array}{|c|}
+			\hline
+			7 \\
+			\hline
+		\end{array}$
+		$\begin{array}{|l|r|}
+			\hline
+			2 & 1 \\
+			\hline
+		\end{array}$
+		$\begin{array}{|c|}
+			\hline
+			6 \\
+			\hline
+		\end{array}$
+		
+		$\swarrow$
+		\hspace{0.1cm}$\searrow$
+		\hspace{0.85cm}$\swarrow$
+		\hspace{0.1cm}$\searrow$
+		\item
+		$\begin{array}{|c|}
+			\hline
+			4 \\
+			\hline
+		\end{array}$
+		$\begin{array}{|c|}
+			\hline
+			3 \\
+			\hline
+		\end{array}$
+		$\begin{array}{|c|}
+			\hline
+			7 \\
+			\hline
+		\end{array}$
+		$\begin{array}{|c|}
+			\hline
+			2 \\
+			\hline
+		\end{array}$
+		$\begin{array}{|c|}
+			\hline
+			1 \\
+			\hline
+		\end{array}$
+		$\begin{array}{|c|}
+			\hline
+			6 \\
+			\hline
+		\end{array}$
+		
+		\hspace{0.1cm}$\searrow$
+		\hspace{0.2cm}$\swarrow$
+		\hspace{0.85cm}$\searrow$
+		\hspace{0.1cm}$\swarrow$
+		\item
+		$\begin{array}{|l|r|}
+			\hline
+			3 & 4 \\
+			\hline
+		\end{array}$
+		$\begin{array}{|c|}
+			\hline
+			7 \\
+			\hline
+		\end{array}$
+		$\begin{array}{|l|r|}
+			\hline
+			1 & 2 \\
+			\hline
+		\end{array}$
+		$\begin{array}{|c|}
+			\hline
+			6 \\
+			\hline
+		\end{array}$
+		
+		\hspace{0.3cm}$\searrow$
+		\hspace{0.3cm}$\swarrow$
+		\hspace{0.6cm}$\searrow$
+		\hspace{0.1cm}$\swarrow$
+		\item
+		$\begin{array}{|l|c|r|}
+			\hline
+			3 & 4 & 7 \\
+			\hline
+		\end{array}$
+		$\begin{array}{|l|c|r|}
+			\hline
+			1 & 2 & 6 \\
+			\hline
+		\end{array}$
+		
+		\hspace{0.8cm}$\searrow$
+		\hspace{0.8cm}$\swarrow$
+		\item
+		$\begin{array}{|l|c|c|c|c|r|}
+			\hline
+			1 & 2 & 3 & 4 & 6 & 7 \\
+			\hline
+		\end{array}$
+	\end{enumerate}
+\end{minipage}
+
+\section{Quick Sort}
+\idea{All about partition\\
+	  Pick one pivot random, first number, mid or last number\\
+	  Any number less then pivot going to left array\\
+	  Any number equal to pivot going to mid array\\
+	  Any number greater then pivot going to right array\\
+	  Recursively sort the left and right array\\
+	  Better apply to array}
+\example{Sort the following list}
+
+\begin{minipage}{0.8\textwidth}
+	\hspace{1cm}$\rightarrow$
+	\hspace{2.2cm}
+	$\leftarrow$
+	\begin{enumerate}
+		\item 
+		$\begin{array}{|l|c|c|c|c|r|}
+			\hline
+			4 & 3 & 7 & 2 & 1 & 6 \\
+			\hline
+		\end{array}$
+		pivot: 7
+		
+		\hspace{1.2cm}$\rightarrow$
+		\hspace{1cm}$\leftarrow$
+		
+		\item 
+		$\begin{array}{|l|c|c|c|c|r|}
+			\hline
+			\cellcolor{green}{4} & \cellcolor{green}{3} & \cellcolor{red}{7} & 2
+			& 1 & \cellcolor{red}{6}\\
+			\hline
+		\end{array}$
+		pivot: 7
+		
+		\hspace{1.8cm}$\rightarrow$
+		\hspace{0.02cm}$\leftarrow$
+		
+		\item
+		$\begin{array}{|l|c|c|c|c|r|}
+			\hline
+			\cellcolor{green}{4} & \cellcolor{green}{3} & \cellcolor{green}{6} &
+			\cellcolor{red}{2} & \cellcolor{red}{1} & \cellcolor{green}{7}\\
+			\hline
+		\end{array}$
+		pivot: 7
+		
+		\hspace{1.8cm}$\rightarrow$
+		\hspace{0.02cm}$\leftarrow$
+		
+		\item
+		$\begin{array}{|l|c|c|c|c|r|}
+			\hline
+			\cellcolor{green}{4} & \cellcolor{green}{3} & \cellcolor{green}{6} &
+			\cellcolor{green}{1} & \cellcolor{green}{2} & \cellcolor{green}{7}\\
+			\hline
+		\end{array}$
+		pivot: 7
+				
+		$\rightarrow$
+		\hspace{1.2cm}$\leftarrow$
+		\hspace{1.75cm}$\rightarrow$
+		\hspace{0.02cm}$\leftarrow$
+		
+		\item
+		$\begin{array}{|l|c|c|r|}
+			\hline
+			4 & 3 & 6 & 2\\
+			\hline
+		\end{array}$
+		pivot: 3
+		$\begin{array}{|l|r|}
+			\hline
+			1 & 7\\
+			\hline
+		\end{array}$
+		pivot: 1
+		
+		......
+		
+		\item
+		$\begin{array}{|l|c|c|c|c|r|}
+			\hline
+			1 & 2 & 3 & 5 & 6 & 7 \\
+			\hline
+		\end{array}$
+	\end{enumerate}
+\end{minipage}\\\\\\
+
+\section{Quick Select}
+\idea{Similar as quick sort\\
+	  The difference is quick sort recursively sort left, mid and right
+	  Quick Select only recursively sort left or right}
+
+\end{document}
