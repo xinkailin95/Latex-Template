@@ -68,14 +68,16 @@
 		
 		\hspace{-1.5cm}Prime\hspace{0.09cm}: 2, 3, 5, 7
 	\end{enumerate}
-\end{minipage}\\\\
+\end{minipage}
+\vfill
 
 \section{Merge Sort}
 \idea{Find the mid point and then split array into half\\
 	  Merge sort the left array\\
 	  Merge sort the right array\\
 	  Merge left and right array\\
-	  Better apply to LinkedList}
+	  Better apply to LinkedList\\
+	  Rune time: O(nlogn)}
 \example{Sort the following list}
 
 \begin{minipage}{0.8\textwidth}
@@ -216,6 +218,8 @@
 	\end{enumerate}
 \end{minipage}
 
+\newpage
+
 \section{Quick Sort}
 \idea{All about partition\\
 	  Pick one pivot random, first number, mid or last number\\
@@ -223,13 +227,13 @@
 	  Any number equal to pivot going to mid array\\
 	  Any number greater then pivot going to right array\\
 	  Recursively sort the left and right array\\
-	  Better apply to array}
+	  Better apply to array\\
+	  Run time: worse case-O(n\^{2}, best case-O(nlogn))}
 \example{Sort the following list}
 
 \begin{minipage}{0.8\textwidth}
 	\hspace{1cm}$\rightarrow$
-	\hspace{2.2cm}
-	$\leftarrow$
+	\hspace{2.4cm}$\leftarrow$
 	\begin{enumerate}
 		\item 
 		$\begin{array}{|l|c|c|c|c|r|}
@@ -240,7 +244,7 @@
 		pivot: 7
 		
 		\hspace{1.2cm}$\rightarrow$
-		\hspace{1cm}$\leftarrow$
+		\hspace{1.2cm}$\leftarrow$
 		
 		\item 
 		$\begin{array}{|l|c|c|c|c|r|}
@@ -303,11 +307,49 @@
 			\hline
 		\end{array}$
 	\end{enumerate}
-\end{minipage}\\\\\\
+\end{minipage}
+\\\\\\
 
 \section{Quick Select}
 \idea{Similar as quick sort\\
 	  The difference is quick sort recursively sort left, mid and right
 	  Quick Select only recursively sort left or right}
+	  
+\newpage
+	  
+\section{Binary Search}
+\idea{Find mid point then compare with the target\\
+      Base case if the mid is equal to target then return it\\
+	  If the mid is less then target recursive left half\\
+	  If the mid if greater than target recursive right half\\
+	  Run time: O(logn)}
+\example{Find 7 in the following sorted array\\1 3 5 7 8}
+
+\begin{minipage}{0.8\textwidth}
+	\hspace{1.2cm}L
+	\hspace{0.7cm}M
+	\hspace{0.6cm}R
+	\begin{enumerate}
+		\item 
+		$\begin{array}{|l|c|c|c|r|}
+			\hline
+			1 & 3 & 5 & 7 & 8 \\
+			\hline
+		\end{array}$
+		mid: 5, 5 < 7
+		
+		\hspace{1.2cm}L
+		\hspace{0.2cm}M
+		\hspace{0.2cm}R
+		
+		\item 
+		$\begin{array}{|l|c|c|c|c|r|}
+			\hline
+			1 & 3 & 5 & 7 & 8 \\
+			\hline
+		\end{array}$
+		mid: 7, 7 == 7
+	\end{enumerate}
+\end{minipage}
 
 \end{document}
