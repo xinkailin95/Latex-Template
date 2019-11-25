@@ -1,0 +1,124 @@
+\documentclass[11pt, letterpaper]{article} %Sets the default text size to 11pt and class to article
+\usepackage{times}
+\usepackage{nopageno}
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage[margin=1.0in]{geometry}
+\usepackage{hyperref}
+
+\titleformat{\section}
+{\Large\bfseries\uppercase}  %this argument for the formatting
+{}     %this argument is for numbering
+{0em}  %distance between the number and text
+{}[\titlerule]  %after the gap between the number and title
+
+\titlespacing{\section}
+{0em}    %left margin
+{0em}    %space between
+{0em}    %space afterward
+
+\titleformat{\subsection}[runin]
+{\bfseries\large}
+{}
+{0em}
+{}
+
+\titlespacing{\subsection}
+{0em}    %left margin
+{0em}    %space between
+{0.5em}  %space afterward
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\maketitle}{
+\begin{center}
+{\Huge\bfseries
+\theauthor}
+
+266 Union Ave, Apt. 2, New Rochelle, NY 10801
+
+\href{mailto:xinkaili@buffalo.edu}{xinkaili@buffalo.edu} $\bullet$ 646-309-3660
+
+\end{center}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Begin %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\begin{document}\title{Resume} 
+\author{Xinkai Lin}
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Education %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Education}
+\subsection{University at Buffalo, The State University of New York}
+\hspace*{\fill}May 2019
+
+\noindent Bachelor of Science in Computer Science 
+\hspace*{\fill}GPA: 3.49/4.0\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SKILLS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{SkillS}
+\subsection{Programming}
+: Java, C\#, .NET, SQL Server, MySQL, HTML, CSS, JavaScript
+
+\subsection{Tools}
+: Visual Studio, Eclipse, Version Control(Git), Unity, Microsoft Office
+
+\subsection{Language}
+: Fluent in Mandarin Chinese\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Research Experience %%%%%%%%%%%%%%%%%%%%%%%%
+\section{Work Experience}
+\subsection{Junior Software Developer}
+\hspace*{\fill}Sep 2019 -- Now
+\linebreak
+\vspace{-0.8em}
+\textit{Digitech Computer, Chappaqua, NY}
+\begin{itemize}
+	\setlength\itemsep{-0.5em}
+	\item Develop, test and implement new feature to current client system
+	\item Provide solution to any issue or bug discover in the system
+	\item Work as part of a small software development team to produce technical work, as directed by the Manager and other Senior Software Developer
+	\item Work both independently and interactive with other members in the team
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%% Professional Experience %%%%%%%%%%%%%%%%%%%%%
+\vspace{0.5em}
+\section{Professional Experience}
+\subsection{Web Applications for Movies}
+\hspace*{\fill}Nov 2018 -- Jan 2019
+\linebreak
+\vspace{-0.7em}
+\textit{Personal Project}
+\begin{itemize}
+	\setlength\itemsep{-0.5em}
+	\item Launched an Amazon Web Services EC2 instance and setup MySQL database
+	\item Built the movie website which displayed the top 20 hit movies, also implemented search function where user can find the specific movie based on the movie's name, genres, actors and director
+	\item Separated frontend and backend implementation; the frontend fetches the data by sending HTTP requests to the backend and then displays the returned data; the Java Servlet backend only provides API in a JSON format to the frontend
+\end{itemize}
+\vspace{-0.5em}
+
+\subsection{Geek Fantasy(2D Unity Game)}
+\hspace*{\fill}Jan 2018 -- Mar 2018
+\linebreak
+\vspace{-0.7em}
+\textit{University at Buffalo, Buffalo, NY}
+\begin{itemize}
+	\setlength\itemsep{-0.5em}
+	\item Created a Two-dimensional Role Play Game by Unity included one player and approximately thirty enemy's game objects in eight different play scenes
+	\item Implemented player's movement and attack script written in C\#, so that player is able to control the character to move in four directions and attack enemy in their desire
+	\item Implemented enemy's AI script included enemy automatic trace and attack ability, enemy would automatically trace and attacked player when they're within certain range
+	\item Applied collision to all game objects, so that they are able to detected the intersection of two or more objects
+\end{itemize}
+\vspace{-0.5em}
+
+\subsection{Research Assistant }
+\hspace*{\fill}Jan 2018 -- Mar 2018
+\linebreak
+\vspace{-0.7em}
+\textit{University at Buffalo, Buffalo, NY}
+\begin{itemize}
+	\setlength\itemsep{-0.5em}
+	\item Organized the edit page layout by centered all the information, displayed in full screen mode and changed background color
+	\item Beautify the main page by adding more photos of Botanical Garden, also adding statistic information from database
+
+\end{itemize}
+\end{document}
